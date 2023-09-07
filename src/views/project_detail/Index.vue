@@ -45,9 +45,15 @@ export default {
     mounted() {
         this.isLoading = true;
 
-        if (this.prevRoute.path === '/project') {
+        console.log(this.prevRoute.path);
+        console.log(this.$route.query.page);
+        console.log(this.$store.state.page);
+
+        if (this.prevRoute.path === '/' || this.prevRoute.path === '/project') {
             this.$store.commit('savePage', this.$route.query.page);
         }
+
+        console.log(this.$store.state.page);
 
         axios
         .get('/api/project/' + this.projectId() + '/project_detail')
