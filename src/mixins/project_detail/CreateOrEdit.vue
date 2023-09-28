@@ -189,7 +189,7 @@ export default {
                                 </div>
                                 <div class="col-span-3 sm:col-span-1">
                                     <Label for="upload_file" value="アップロードファイル" />
-                                    <template v-if="isEdit && form.upload_file && typeof(form.upload_file) !== 'object'">
+                                    <template v-if="isEdit && form.upload_file && form.upload_file !== 'null' && typeof(form.upload_file) !== 'object'">
                                         <input type="hidden" id="delete_button" name="delete_button" v-model="form.delete_button" />
                                         <a :href="uploadFile">{{ form.upload_file }}</a><br>
                                         <button
