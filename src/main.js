@@ -5,7 +5,7 @@ import store from './store'
 import './main.css'
 
 import axios from 'axios'
-axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.baseURL = 'https://backend.cspm.fun'
 axios.defaults.withCredentials = true
 
 createApp(App).use(store).use(router).mount('#app')
